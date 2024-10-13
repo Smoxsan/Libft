@@ -6,21 +6,21 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:43:07 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/13 17:54:10 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/13 19:59:58 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-int	ft_memset(char *b, int c, int l)
+int	ft_memset(char *b, int c, int count)
 {
 	char	*temp;
 
 	*temp = *b;
-	while (l != 0)
+	while (count != 0)
 	{
 		*b = c;
 		b++;
-		--l;
+		--count;
 	}
 	return (*temp);
 }
