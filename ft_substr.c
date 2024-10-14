@@ -13,7 +13,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     if (result == NULL) {
         return NULL;
     }
-    strncpy(result, s + start, len);
+    ft_strlcpy(result, s + start, len);
     result[len] = '\0';
 
     return result;
