@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:58 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/12 14:06:35 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/16 11:18:37 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strrchr(const char *str, int c)
+char	ft_strrchr(const char *str, size_t c)
 {
 	char	*temp;
 
