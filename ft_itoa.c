@@ -11,8 +11,8 @@ char *ft_itoa(int n)
 		num = num/10;
 		count++;
 	}
-	result = malloc((count +1)*(sizeof(char)));
-	result[count] = "/0";
+	result = (char*)malloc((count + 1) * sizeof(char*));
+	result[count] = '\0';
 	while(n >= 10)
 	{
 		result[count--] = n/10;
