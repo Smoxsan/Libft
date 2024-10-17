@@ -59,7 +59,7 @@ char **ft_split(char const *s, char c) {
             {
                 result[index++] = copy_substring(start, s - start);
             }
-            start = s + 1;  
+            start = s + 1;
         }
         s++;
     }
@@ -67,6 +67,6 @@ char **ft_split(char const *s, char c) {
     {
         result[index++] = copy_substring(start, s - start);
     }
-    result[index] = NULL; 
+    result[index] = NULL;
     return result;
 }
