@@ -6,11 +6,11 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:37:07 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/13 17:56:53 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/18 18:07:20 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int a)
+int ft_toupper(int a)
 {
 	if ('a' <= a && a <= 'z')
 		return (a - 32);

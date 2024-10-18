@@ -6,11 +6,11 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:20:35 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/07 18:21:57 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/18 17:56:03 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int a)
+int	ft_isdigit(int a)
 {
 	if (a <= 57 && a >= 48)
 		return (1);

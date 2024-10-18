@@ -6,11 +6,11 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:32:43 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/18 16:33:33 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/18 18:01:11 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void ft_putnbr_fd(int n, int fd)
 {
 write(fd, n, 16);
-}
+}putnumbr
