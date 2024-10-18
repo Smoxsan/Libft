@@ -6,11 +6,12 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 17:47:08 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/18 18:07:31 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/18 18:08:28 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
+#include <unistd.h>
 #define LIBFT_H
 int	ft_atoi(char *str);
 void	bzero(void *s, size_t n);

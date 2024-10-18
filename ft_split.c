@@ -6,10 +6,11 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/18 17:48:57 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/18 18:09:33 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 static int count_substrings(char const *s, char c)
 {
     int count = 0;
