@@ -6,9 +6,11 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:58 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/16 11:18:37 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/20 14:53:52 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	ft_strrchr(const char *str, size_t c)
 {

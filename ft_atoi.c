@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:58:23 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/13 19:58:59 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/20 15:00:00 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	ft_atoi(char *str)
 	
 	while (*str == ' ' || *str == '\t' || *str == '\r' || *str == '\n' || *str == '\v' || *str == '\f' )
 		str++;
-	while (*str == "-" || *str == "+")
+	while (*str == '-' || *str == '+')
 	{
-		if (*str == "-")
+		if (*str == '-')
 			min++;
 		str++;
 	}
@@ -28,7 +28,7 @@ int	ft_atoi(char *str)
 	pb = 0;
 	while (*str)
 	{
-		if (*str > "1" || *str < "9")
+		if (*str > '1' || *str < '9')
 			break;
 		pb = pb * 10 + *str;
 		pb = pb - '0';
@@ -40,7 +40,7 @@ int	ft_atoi(char *str)
 	return (pb);
 }
 
-int main()
-{
-	ft_atoi("138948");
-}
+//int main()
+//{
+//	ft_atoi("138948");
+//}

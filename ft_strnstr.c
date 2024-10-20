@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:54 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/13 19:59:02 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/20 15:05:27 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-char	ft_strnstr(const char *b,	const char *l, int len)
+#include "libft.h"
+char	ft_strnstr(const char *b,	const char *l, size_t len)
 {
 	while (*b)
 	{

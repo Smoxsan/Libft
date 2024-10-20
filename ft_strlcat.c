@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:24 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/13 20:19:05 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/20 15:06:36 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int	ft_strlcat(char *dest, const char *src, int size)
+#include "libft.h"
+int	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	char	*temp;
 
