@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:53:29 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/09 14:57:53 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 12:58:10 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int	ft_strcmp(const char *str, const char *comp)
 {
-	unsigned char	n;
 	int				res;
 
 	while (*str && *str == *comp)

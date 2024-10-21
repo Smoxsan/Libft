@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 04:43:20 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/21 13:27:39 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int count_substrings(char const *s, char c)
 
 	while (*s != '\0')
 	{
-		if (*s != c && !sub) // c = are we in a substring, sub is it 0 so beginn of new substring or 1 in substring
+		if (*s != c && !sub)
 		{
 			sub = 1;
 			count++;
@@ -39,7 +39,7 @@ static char* copy_substring(const char* start, size_t len)
 	{
 		return (NULL); 
 	}
-	ft_strncpy(substring, start, len);
+	ft_strlcpy(substring, start, len);
 	substring[len] = '\0'; 
 	return (substring);
 }

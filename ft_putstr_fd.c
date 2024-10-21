@@ -6,15 +6,16 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:25:51 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/18 16:31:19 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:19:28 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 void ft_putstr_fd(char *s, int fd)
 {
 	while(*s)
 	{
-		write(fd, *s, 1);
+		write(fd, s, 1);
 		s++;
 	}
 }

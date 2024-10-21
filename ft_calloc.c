@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:00 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 04:39:00 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/21 13:24:17 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 void* ft_calloc(size_t num_elements, size_t element_size)
 {
-	int ptr;
+	char* ptr;
 	size_t size;
 	size = num_elements * element_size;
 	ptr = malloc(size);

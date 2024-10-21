@@ -6,15 +6,16 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:43:07 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/13 19:59:58 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:18:52 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 int	ft_memset(char *b, int c, int count)
 {
 	char	*temp;
 
+	temp = NULL;
 	*temp = *b;
 	while (count != 0)
 	{

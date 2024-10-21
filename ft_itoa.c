@@ -6,10 +6,11 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:02:45 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/18 15:02:47 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:10:16 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 char *ft_itoa(int n)
 {
 	int num;
@@ -18,6 +19,7 @@ char *ft_itoa(int n)
 
 	num = n;
 	count = 0;
+	result = NULL;
 	while(num >= 10)
 	{
 		num = num/10;
