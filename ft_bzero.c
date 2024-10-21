@@ -6,24 +6,12 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:45 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:16:31 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 15:56:45 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char *q;
-
-	q = (char *)s;
-	while (*q)
-	{
-		++q;
-		--n;
-		if (n == 0)
-		{
-			*q = '\0';
-			break ;
-		}
-	}
+ft_memset(s, 0, n);
 }

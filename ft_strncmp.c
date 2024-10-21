@@ -6,14 +6,14 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:53:29 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 12:58:10 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:59:31 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
 
-int	ft_strcmp(const char *str, const char *comp)
+int	ft_strncmp(const char *str, const char *comp)
 {
 	int				res;
 

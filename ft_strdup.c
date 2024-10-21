@@ -6,13 +6,13 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:25 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:15:45 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:51:52 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char* strdup(const char* str)
+char* ft_strdup(const char* str)
 {
 	int count;
 	char* ptr;

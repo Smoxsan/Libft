@@ -6,30 +6,28 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:43:07 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:18:52 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 15:26:49 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int	ft_memset(char *b, int c, int count)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*temp;
-
-	temp = NULL;
-	*temp = *b;
-	while (count != 0)
+	unsigned char *h;
+	h = b;
+	while (len != 0)
 	{
-		*b = c;
-		b++;
-		--count;
+		*h = (unsigned char)c;
+		h++;
+		--len;
 	}
-	return (*temp);
+	return (b);
 }
 
-int main()
-{
-	ft_memset("121212121", 8, 3);
-}
+// int main()
+// {
+// 	ft_memset("121212121", 8, 3);
+// }
 
 
 	// while(*b)

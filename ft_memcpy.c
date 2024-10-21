@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 11:58:47 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 11:58:51 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/21 16:05:19 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return(dest);
 	while(n != 0)
 	{
-		s2 = s1;
+		*s2 = *s1;
 		s1++;
 		s2++;
 		n--;
