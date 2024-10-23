@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:27:39 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/23 17:00:31 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ static int count_substrings(char const *s, char c)
 static char* copy_substring(const char* start, size_t len)
 {
 	char* substring;
+	
 	substring = (char*)malloc((len + 1) * sizeof(char));
 	if (!substring)
 	{
@@ -52,16 +53,11 @@ char **ft_split(char const *s, char c) {
 	const char* start;
 
 	if (!s)
-	{
 		return NULL;  
-	}
 	substr_count = count_substrings(s, c);
 	result = (char**)malloc((substr_count + 1) * sizeof(char*));
 	if (!result)
-	{
 		return NULL; 
-	}
-
 	index = 0;
 	start = s;
 	while (*s != '\0')
@@ -69,17 +65,13 @@ char **ft_split(char const *s, char c) {
 		if (*s == c)
 		{
 			if (start != s)
- 			{
 				result[index++] = copy_substring(start, s - start);
-			}
 			start = s + 1;
 		}
 		s++;
 	}
 	if (start != s)
-	{
 		result[index++] = copy_substring(start, s - start);
-	}
 	result[index] = NULL;
 	return result;
 }

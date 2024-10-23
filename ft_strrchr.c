@@ -6,21 +6,41 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:58 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:23:12 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/23 15:37:41 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_strrchr(const char *str, size_t c)
+char	*ft_strrchr(const char *str, size_t c)
 {
-	char	*temp;
+	int i;
+	char *r;
 
-	temp = NULL;
-	while (*str)
+	r = (char *)str;
+	i = ft_strlen((char *)str);
+	r = r + i;
+	while (*r)
 	{
-		if (c == (size_t)str)
-			*temp = *str;
+		if (c == (size_t)r)
+			return (r);
+		i--;
+		r--;
 	}
-	return (*temp);
+	return (0);
 }
+// #include <stdio.h>
+// int main() {
+//     const char *str = "vobdvwyt2*#^($#TYFG#^&FDVYCGHG^&$TR^&Qfrveghvcahj";
+//     char ch = 'o';
+    
+//     char *result = ft_strrchr(str, ch);
+    
+//     if (result) {
+//         printf("Last occurrence of '%c': %s\n", ch, result);
+//     } else {
+//         printf("Character not found.\n");
+//     }
+
+//     return 0;
+// }

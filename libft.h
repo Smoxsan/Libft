@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 17:47:08 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 17:23:40 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/23 15:48:51 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	ft_strlcat(char *dest, const char *src, size_t size);
 int	ft_strlcpy(char *dest, const char *src, size_t size);
 int	ft_strlen(char *str);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int	ft_strncmp(const char *str, const char *comp);
-char	ft_strnstr(const char *b,	const char *l, size_t len);
-char	ft_strrchr(const char *str, size_t c);
+int	ft_strncmp(const char *str, const char *comp, size_t n);
+char	*ft_strnstr(const char *b,	const char *l, size_t len);
+char	*ft_strrchr(const char *str, size_t c);
 char *ft_strtrim(char const *s1, char const *set);
 char *ft_substr(char *str, unsigned int start, size_t len);
 int	ft_tolower(int a);

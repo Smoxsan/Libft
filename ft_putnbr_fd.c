@@ -6,18 +6,23 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:32:43 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:15:10 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/23 17:18:36 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 void ft_putnbr_fd(int n, int fd)
 {
-    char *s;
-    s = ft_itoa(n);
-	while(*s)
-	{
-		write(fd, s, 1);
-		s++;
+	char *nb;
+	if (n < 0) {
+	*nb = ft_putchar('-');
+		n = -n;
+		nb ++;
 	}
+	if (n >= 10) {
+		ft_putnbr(n / 10);
+		n = n % 10;
+	}
+	if (n < 10) 
+	nb = n + '0';
 }
