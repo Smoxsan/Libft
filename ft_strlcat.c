@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:24 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 12:57:50 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/24 16:27:00 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_strlcat(char *dest, const char *src, size_t size)
 	char	*temp;
 
 	temp = NULL;
-	*temp = *dest;
+	temp = dest;
 	while (*dest)
 	{
 		dest++;

@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:58:23 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:08:15 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/24 15:32:12 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,23 @@ int	ft_atoi(char *str)
 	pb = 0;
 	while (*str == ' ' || *str == '\t' || *str == '\r' || *str == '\n' || *str == '\v' || *str == '\f' )
 		str++;
-	while (*str == '-' || *str == '+')
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 			min++;
 		str++;
 	}
+	while (*str == '0')
+		str++;
 	while (*str)
 	{
-		if (*str > '1' || *str < '9')
+		if (*str < '0' || *str > '9')
 			break;
 		pb = pb * 10 + *str;
 		pb = pb - '0';
 		str++;
 	}
-	if (min /2 != 0)
+	if (min == 1)
 		pb = pb * -1;
 	//printf("%i\n", pb);
 	return (pb);
