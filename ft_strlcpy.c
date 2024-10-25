@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:19 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/25 10:45:17 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/25 15:52:30 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,24 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (strlen);
 }
 
-#include </usr/include/stdio.h>
-int main(void)
-{
+//#include </usr/include/stdio.h>
+//int main(void)
+//{
     // Define source and destination buffers
-    const char src[] = "Hello, World!";
-    char dest[20];
-    char small_dest[5];
+//    const char src[] = "Hello, World!";
+//    char dest[20];
+//    char small_dest[5];
 
     // Test with a large enough buffer
-    size_t len = ft_strlcpy(dest, src, sizeof(dest));
-    printf("Source: \"%s\"\n", src);
-    printf("Copied to dest: \"%s\"\n", dest);
-    printf("Length of src: %zu\n", len);
+//    size_t len = ft_strlcpy(dest, src, sizeof(dest));
+//    printf("Source: \"%s\"\n", src);
+//    printf("Copied to dest: \"%s\"\n", dest);
+//    printf("Length of src: %zu\n", len);
 
     // Test with a smaller buffer
-    len = ft_strlcpy(small_dest, src, sizeof(small_dest));
-    printf("\nCopied to small_dest: \"%s\"\n", small_dest);
-    printf("Length of src: %zu\n", len);
+//    len = ft_strlcpy(small_dest, src, sizeof(small_dest));
+//    printf("\nCopied to small_dest: \"%s\"\n", small_dest);
+//    printf("Length of src: %zu\n", len);
 
-    return 0;
-}
+//    return 0;
+//}
