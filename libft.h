@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 17:47:08 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/23 15:48:51 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/25 10:54:39 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ char	*ft_strchr(const char *str, int search_str);
 char* ft_strdup(const char* str);
 char *ft_strjoin(char const *s1, char const *s2);
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
-int	ft_strlcat(char *dest, const char *src, size_t size);
-int	ft_strlcpy(char *dest, const char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int	ft_strlen(char *str);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int	ft_strncmp(const char *str, const char *comp, size_t n);
