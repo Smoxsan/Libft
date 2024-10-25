@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:32:43 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/24 14:08:44 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/25 12:37:26 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,17 @@ void ft_putnbr_fd(int n, int fd)
     ft_putchar_fd((n % 10) + '0', fd);
 }
 
-// #include <stdio.h>
-// int main() 
-// {
-//     int number;
+#include <stdio.h>
+ int main() 
+ {
+     int number;
+     printf("Please enter a number: ");
+    scanf("%d", &number);
 
-//     printf("Please enter a number: ");
-//     scanf("%d", &number);
+    ft_putnbr_fd(number, 1);
 
-//     ft_putnbr_fd(number, 1);
-
-//     return 0;
-// }
+     return 0;
+}
 	// char *nb;
 
 	// nb = NULL;
