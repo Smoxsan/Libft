@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 17:47:08 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/25 10:54:39 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/25 14:33:15 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_strlen(char *str);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int	ft_strncmp(const char *str, const char *comp, size_t n);
 char	*ft_strnstr(const char *b,	const char *l, size_t len);
-char	*ft_strrchr(const char *str, size_t c);
+char	*ft_strrchr(const char *str, int c);
 char *ft_strtrim(char const *s1, char const *set);
 char *ft_substr(char *str, unsigned int start, size_t len);
 int	ft_tolower(int a);
