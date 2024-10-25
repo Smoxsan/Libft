@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:54 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/25 15:14:54 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/25 15:17:36 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ char	*ft_strnstr(const char *b,	const char *l, size_t len)
 	{
 		base = (char *)b;
 		isstr = (char *)l;
+		remain_len = len;
 		while (*isstr && len > 0 && *base == *isstr)
         {
             base++;
             isstr++;
-            len--;
+            remain_len--;
         }
         if (!*isstr)
             return (char *)b;
