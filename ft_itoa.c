@@ -3,44 +3,71 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:02:45 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:10:16 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/27 15:11:22 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef INT_MIN
+#define INT_MIN (-2147483647 - 1)
+#endif
+
 #include "libft.h"
+#include <stdlib.h> // for malloc
+
+static int count_digits(int n)
+{
+    int count;
+    
+    count = (n <= 0) ? 1 : 0;
+    while (n != 0)
+    {
+        n /= 10;
+        count++;
+    }
+    return count;
+}
+
+
+static void fill_number(char *result, int n, int len)
+{
+    result[len] = '\0';
+    if (n < 0) result[0] = '-';
+    n = (n < 0) ? -n : n;
+    while (--len >= 0 && result[len] != '-')
+    {
+        result[len] = (n % 10) + '0';
+        n /= 10;
+    }
+}
+
 char *ft_itoa(int n)
 {
-	int num;
-	int count;
-	char *result;
+    int len;
+    char *result;
 
-	num = n;
-	count = 0;
-	result = NULL;
-	while(num >= 10)
-	{
-		num = num/10;
-		count++;
-	}
-	    if (n < 0)
-    {
-        result[0] = '-';
-        n = -n;
-    }
-    else if (n == 0)
-    {
-        result[0] = '0';
-        result[1] = '\0';
-        return result;
-    }
-	result = (char*)malloc((count + 1) * sizeof(char));
-	result[count] = '\0';
-	while(n >= 10)
-	{
-		result[count--] = n/10;
-	}
-	return result;
+    len = 0;
+    result = NULL;
+    if (n == INT_MIN)
+        return ft_strdup("-2147483648");
+    len = count_digits(n);
+    result = (char *)malloc(len + 1);
+    if (!result) return NULL;
+    fill_number(result, n, len);
+    return result;
+}
+
+#include <stdio.h>
+#include <limits.h>
+int main(void)
+{
+    printf("ft_itoa(0): %s\n", ft_itoa(0));                  // Should return "0"
+    printf("ft_itoa(-123): %s\n", ft_itoa(-123));            // Should return "-123"
+    printf("ft_itoa(456): %s\n", ft_itoa(456));              // Should return "456"
+    printf("ft_itoa(INT_MIN): %s\n", ft_itoa(INT_MIN));      // Should return "-2147483648"
+    printf("ft_itoa(INT_MAX): %s\n", ft_itoa(INT_MAX));      // Should return "2147483647"
+
+    return 0;
 }
