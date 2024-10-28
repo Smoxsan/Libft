@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:58:23 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:00:21 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/28 12:55:57 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,12 @@ int	ft_atoi(char *str)
 	while (*str == ' ' || *str == '\t' || *str == '\r' || *str == '\n'
 		|| *str == '\v' || *str == '\f')
 		str++;
-	if (*str == '-' || *str == '+')
+	if (*str == '-')
 	{
-		if (*str == '-')
-			min++;
+		min++;
 		str++;
 	}
-	while (*str == '0')
+	while (*str == '0' || *str == '+')
 		str++;
 	while (*str)
 	{
