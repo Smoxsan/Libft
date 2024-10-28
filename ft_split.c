@@ -3,26 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/23 17:00:31 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/28 12:02:55 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static int count_substrings(char const *s, char c)
-{
-	int count = 0;
-	int sub = 0;
 
+static int	count_substrings(char const *s, char c)
+{
+	int	count;
+	int	sub;
+
+	count = 0;
+	sub = 0;
 	while (*s != '\0')
 	{
 		if (*s != c && !sub)
 		{
 			sub = 1;
 			count++;
-		} else if (*s == c)
+		}
+		else if (*s == c)
 		{
 			sub = 0;
 		}
@@ -31,33 +35,33 @@ static int count_substrings(char const *s, char c)
 	return (count);
 }
 
-static char* copy_substring(const char* start, size_t len)
+static char	*copy_substring(const char *start, size_t len)
 {
-	char* substring;
-	
-	substring = (char*)malloc((len + 1) * sizeof(char));
+	char	*substring;
+
+	substring = (char *)malloc((len + 1) * sizeof(char));
 	if (!substring)
 	{
-		return (NULL); 
+		return (NULL);
 	}
 	ft_strlcpy(substring, start, len);
-	substring[len] = '\0'; 
+	substring[len] = '\0';
 	return (substring);
 }
 
-
-char **ft_split(char const *s, char c) {
-	int substr_count;
-	char** result;
-	int index;
-	const char* start;
+char	**ft_split(char const *s, char c)
+{
+	int			substr_count;
+	char		**result;
+	int			index;
+	const char	*start;
 
 	if (!s)
-		return NULL;  
+		return (NULL);
 	substr_count = count_substrings(s, c);
-	result = (char**)malloc((substr_count + 1) * sizeof(char*));
+	result = (char **)malloc((substr_count + 1) * sizeof(char *));
 	if (!result)
-		return NULL; 
+		return (NULL);
 	index = 0;
 	start = s;
 	while (*s != '\0')
@@ -73,5 +77,5 @@ char **ft_split(char const *s, char c) {
 	if (start != s)
 		result[index++] = copy_substring(start, s - start);
 	result[index] = NULL;
-	return result;
+	return (result);
 }

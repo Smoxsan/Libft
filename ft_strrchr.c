@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:58 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/25 14:39:33 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/28 12:04:55 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char *r;
-	char *t;
+	char	*r;
+	char	*t;
 
 	r = NULL;
 	r = (char *)str;
@@ -27,21 +27,26 @@ char	*ft_strrchr(const char *str, int c)
 		r++;
 	}
 	if (c == '\0')
-        return (r); 
-    return (t); 
+		return (r);
+	return (t);
 }
- #include <stdio.h>
- int main() {
-    const char *str = "v0oedvbz826o3eg71zdv1outg71ghvcahj";
-    char ch = 'o';
-    
-     char *result = ft_strrchr(str, ch);
-    
-     if (result) {
-        printf("Last occurrence of '%c': %s\n", ch, result);
-    } else {
-       printf("Character not found.\n");
-     }
+#include <stdio.h>
 
-     return 0;
- }
+int	main(void)
+{
+	const char *str = "v0oedvbz826o3eg71zdv1outg71ghvcahj";
+	char ch = 'o';
+
+	char *result = ft_strrchr(str, ch);
+
+	if (result)
+	{
+		printf("Last occurrence of '%c': %s\n", ch, result);
+	}
+	else
+	{
+		printf("Character not found.\n");
+	}
+
+	return (0);
+}

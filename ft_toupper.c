@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:37:07 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 12:00:27 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/28 12:05:14 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int a)
+int	ft_toupper(int a)
 {
 	if ('a' <= a && a <= 'z')
 		return (a - 32);

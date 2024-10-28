@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:59:10 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/21 13:20:26 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/28 12:04:18 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int count;
 
 	count = 0;
-	while(*s)
+	while (*s)
 	{
 		f(count, s);
 		count++;
