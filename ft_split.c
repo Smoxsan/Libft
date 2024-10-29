@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/29 17:05:53 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 17:20:35 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,22 +71,18 @@ static char	*copy_substring(const char *start, size_t len)
 	return (substring);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**split_substrings(char const *s, char c, int count)
 {
-	int			count;
-	char		**result;
 	int			index;
+	char		**result;
 	const char	*start;
 
-	if (!s)
-		return (NULL);
-	count = count_substrings(s, c);
 	result = (char **)malloc((count + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	index = 0;
 	start = s;
-	while (*s != '\0')
+	index = 0;
+	while (*s)
 	{
 		if (*s == c)
 		{
@@ -100,4 +96,14 @@ char	**ft_split(char const *s, char c)
 		result[index++] = copy_substring(start, s - start);
 	result[index] = NULL;
 	return (result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int	count;
+
+	if (!s)
+		return (NULL);
+	count = count_substrings(s, c);
+	return (split_substrings(s, c, count));
 }
