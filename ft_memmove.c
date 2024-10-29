@@ -6,11 +6,12 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 11:59:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:08:07 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 13:27:06 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*s1;
@@ -21,13 +22,18 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (!dest && !src)
 		return (dest);
 	if (dest < src)
-		return (ft_memcpy(dest, src, n));
-	while (n > 0)
 	{
-		*s2 = *s1;
-		s1++;
-		s2++;
-		n--;
+		while (n--)
+			*s1++ = *s2++;
+	}
+	else
+	{
+		s1 += n - 1;
+		s2 += n - 1;
+		while (n--)
+		{
+			*s1-- = *s2--;
+		}
 	}
 	return (dest);
 }
@@ -61,8 +67,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 //	target = 'o';
 //	result = (char *)ft_memchr(arr1, target, 5);
 //	if (result)
-//		printf("Test Case 3: Found '%c' in first 5 characters of \"%s\" at position
-//			%ld\n", target, arr1, result - arr1);
 //	else
 //		printf("Test Case 3: '%c' not found in first 5 characters of \"%s\"\n",
 //			target, arr1);

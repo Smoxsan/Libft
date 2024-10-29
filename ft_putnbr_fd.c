@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:32:43 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:02:45 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 12:19:47 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,17 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putchar_fd((n % 10) + '0', fd);
 }
 
-#include <stdio.h>
+//#include <stdio.h>
 
-int	main(void)
-{
-	int	number;
+//int	main(void)
+//{
+//	int	number;
 
-	printf("Please enter a number: ");
-	scanf("%d", &number);
-	ft_putnbr_fd(number, 1);
-	return (0);
-}
+//	printf("Please enter a number: ");
+//	scanf("%d", &number);
+//	ft_putnbr_fd(number, 1);
+//	return (0);
+//}
 // char *nb;
 
 // nb = NULL;

@@ -6,11 +6,37 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 13:04:28 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 17:05:53 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*static_strncpy(char *dest, const char *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (src[i] != '\0')
+		{
+			dest[i] = src[i];
+		}
+		else
+		{
+			dest[i] = '\0';
+			break ;
+		}
+		i++;
+	}
+	while (i < n)
+	{
+		i++;
+		dest[i] = '\0';
+	}
+	return (dest);
+}
 
 static int	count_substrings(char const *s, char c)
 {
@@ -40,7 +66,7 @@ static char	*copy_substring(const char *start, size_t len)
 	substring = (char *)malloc((len + 1) * sizeof(char));
 	if (!substring)
 		return (NULL);
-	ft_strlcpy(substring, start, len);
+	static_strncpy(substring, start, len);
 	substring[len] = '\0';
 	return (substring);
 }
@@ -70,8 +96,8 @@ char	**ft_split(char const *s, char c)
 		}
 		s++;
 	}
+	if (start != s)
+		result[index++] = copy_substring(start, s - start);
 	result[index] = NULL;
 	return (result);
 }
-//	if (start != s)
-//		result[index++] = copy_substring(start, s - start);

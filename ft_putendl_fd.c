@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:27:35 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:02:38 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 13:34:02 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int count;
+	int	count;
+
 	count = ft_strlen(s);
 	while (count != 0)
 	{

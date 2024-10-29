@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:19 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:09:13 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 13:27:35 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	strlen;
-	size_t		i;
+	size_t	i;
 	char	*temp;
 
 	i = 0;

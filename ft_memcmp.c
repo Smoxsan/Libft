@@ -6,11 +6,12 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:31:27 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:07:02 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 13:26:33 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	unsigned char	*s1;

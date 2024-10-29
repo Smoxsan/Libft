@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 17:47:08 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:05:19 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 14:07:44 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # define LIBFT_H
-int		ft_atoi(char *str);
+
+int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t num_elements, size_t element_size);
 int		ft_isalpha(int a);
@@ -39,7 +40,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *str, const char *comp, size_t n);
 char	*ft_strnstr(const char *b, const char *l, size_t len);

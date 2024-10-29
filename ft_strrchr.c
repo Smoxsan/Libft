@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:58 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:04:55 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 15:50:51 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strrchr(const char *str, int c)
 	char	*r;
 	char	*t;
 
-	r = NULL;
 	r = (char *)str;
 	t = NULL;
 	while (*r)
@@ -30,23 +29,23 @@ char	*ft_strrchr(const char *str, int c)
 		return (r);
 	return (t);
 }
-#include <stdio.h>
+//#include <stdio.h>
 
-int	main(void)
-{
-	const char *str = "v0oedvbz826o3eg71zdv1outg71ghvcahj";
-	char ch = 'o';
+//int	main(void)
+//{
+//	const char *str = "v0oedvbz826o3eg71zdv1outg71ghvcahj";
+//	char ch = 'o';
 
-	char *result = ft_strrchr(str, ch);
+//	char *result = ft_strrchr(str, ch);
 
-	if (result)
-	{
-		printf("Last occurrence of '%c': %s\n", ch, result);
-	}
-	else
-	{
-		printf("Character not found.\n");
-	}
+///	if (result)
+//	{
+//		printf("Last occurrence of '%c': %s\n", ch, result);
+//	}
+//	else
+//	{
+//		printf("Character not found.\n");
+//	}
 
-	return (0);
-}
+//	return (0);
+//}

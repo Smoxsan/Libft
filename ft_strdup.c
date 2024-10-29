@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:25 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:04:14 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 13:35:14 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,21 @@ char	*ft_strdup(const char *str)
 {
 	int		count;
 	char	*ptr;
+	char	*temp;
 
 	count = 0;
-	while (*str)
-	{
-		str++;
+	while (str[count])
 		count++;
-	}
-	ptr = (char *)malloc(count * sizeof(char));
+	ptr = (char *)malloc((count + 1) * sizeof(char));
+	if (!ptr)
+		return (NULL);
+	temp = ptr;
 	while (*str)
 	{
-		str = ptr;
+		*temp = *str;
+		temp++;
 		str++;
-		ptr++;
 	}
+	*temp = '\0';
 	return (ptr);
 }

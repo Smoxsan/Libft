@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:58:23 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:55:57 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 13:21:43 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,26 @@
 
 int	ft_atoi(char *str)
 {
-	int	pb;
-	int	min;
+	int	result;
+	int	sign;
 
-	min = 0;
-	pb = 0;
+	result = 0;
+	sign = 1;
 	while (*str == ' ' || *str == '\t' || *str == '\r' || *str == '\n'
 		|| *str == '\v' || *str == '\f')
 		str++;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
-		min++;
+		if (*str == '-')
+			sign = -1;
 		str++;
 	}
-	while (*str == '0' || *str == '+')
-		str++;
-	while (*str)
+	while (*str >= '0' && *str <= '9')
 	{
-		if (*str < '0' || *str > '9')
-			break ;
-		pb = pb * 10 + *str - '0';
+		result = result * 10 + (*str - '0');
 		str++;
 	}
-	if (min == 1)
-		pb = pb * -1;
-	return (pb);
+	return (result * sign);
 }
 
 // int main()

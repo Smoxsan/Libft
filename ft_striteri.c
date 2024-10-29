@@ -6,13 +6,13 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:59:10 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:04:18 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 13:32:15 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int count;
+	unsigned int	count;
 
 	count = 0;
 	while (*s)

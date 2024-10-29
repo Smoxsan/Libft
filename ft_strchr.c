@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:29 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/28 12:04:09 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/29 12:43:24 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *str, int search_str)
 	s = (char *)str;
 	while (*s)
 	{
-		if (*str == r)
+		if (*s == r)
 			return (s);
 		s++;
 	}
