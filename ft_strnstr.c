@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:54 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/29 13:36:00 by smox             ###   ########.fr       */
+/*   Updated: 2024/10/30 13:53:04 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *b, const char *l, size_t len)
 
 	if (!*l)
 		return ((char *)b);
-	while (*base && len > 0)
+	while (*b && len > 0)
 	{
 		base = b;
 		isstr = l;
