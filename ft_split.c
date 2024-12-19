@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:03:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/30 18:04:16 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/12/19 13:27:21 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,10 @@ static char	*copy_substring(const char *start, size_t len)
 {
 	char	*substring;
 
+
 	substring = (char *)malloc((len + 1) * sizeof(char));
 	if (!substring)
-		return (NULL);
+		return (free(substring), NULL);
 	static_strncpy(substring, start, len);
 	substring[len] = '\0';
 	return (substring);
@@ -79,7 +80,7 @@ static char	**split_substrings(char const *s, char c, int count)
 
 	result = (char **)malloc((count + 1) * sizeof(char *));
 	if (!result)
-		return (NULL);
+		return (free(result), NULL);
 	start = s;
 	index = 0;
 	while (*s)
